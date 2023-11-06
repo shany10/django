@@ -1,0 +1,51 @@
+{% extends "core/admin/baseAdmin.html" %}
+{% load static %}
+
+{% block content %}
+<div class="grid grid-cols-3 gap-4 p-6 place-content-center">
+    <div class="col-span-2">
+        <div class="w-[56.5em] h-[38em] bg-white rounded-lg drop-shadow-md p-5">
+          <h1 class="mb-5">Forfait list</h1>
+          <div class="w-full h-full">
+                <table class="w-full border-collapse border border-slate-500 ...">
+                    <thead>
+                    <tr>
+                        <th class="border border-slate-600">Heures</th>
+                        <th class="border border-slate-600">ACTION</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        </tr>
+                        
+                        <tr>
+                        </tr>
+                        
+                        <tr>    
+                        </tr>
+                    </tbody>
+                </table>
+          </div>
+        </div>
+    </div>
+    <div class="w-[25em] h-[38em] bg-white rounded-lg drop-shadow-md p-4">
+        <h1 class="mb-3">Add Forfait</h1>
+        <div class="w-[23em] h-[32em] border border-gray-700 bg-gray-200 rounded-lg">
+            <form class="p-3" action="/add_forfait_save" method="POST">
+                {% csrf_token %}
+                    <div class="grid grid-cols-1 gap-4 mt-4 sm:grid-cols-2">
+                        <div class="mb-2">
+                            <label for="heure" class="block text-gray-700 text-sm mb-2">Heures *</label>
+                            <input type="number" name="first_name" id="first_name"
+                                class="w-full px-3 py-2 leading-tight text-gray-700 border rounded-full appearance-none focus:outline-none focus:shadow-outline">
+                        </div>
+                    </div>
+ 
+                    <div class="flex justify-around mt-10">
+                        <button type="submit" class="px-6 py-2 leading-5 w-32 text-white transition-colors duration-200 transform bg-[#8E63AD] rounded-full hover:bg-[#FDC858] focus:outline-none focus:bg-gray-600">Continuer</button>
+                    </div>
+            </form>
+        </div>
+    </div>
+ </div>
+{% endblock %}

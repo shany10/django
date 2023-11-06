@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+    <div class="grid grid-cols-3 gap-4 p-6 place-content-center">
+        <div class="col-span-2">
+            <div class="w-[56.5em] h-[38em] bg-white rounded-lg drop-shadow-md p-5">
+                <div class="w-full h-full" id="calendar"></div>
+            </div>
+        </div>
+        <div class="w-[25em] h-[38em] bg-white rounded-lg drop-shadow-md p-4">
+            <h1 class="mb-5">New Session</h1>
+            <div class="w-[23em] h-[32em] border border-gray-700 bg-gray-200 rounded-lg">
+                <form class="p-6">
+                    <div>
+                        <div>
+                            <label for="student">Student*</label>
+                            <input id="student" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 rounded-full focus:outline-none">
+                        </div>
+    
+                        <div class="mt-5">
+                            <label for="instructor">Insctructor*</label>
+                            <input id="instructor" type="text" class="block w-full px-4 py-2 mt-2 text-gray-700 rounded-full focus:outline-none">
+                        </div>
+                        <div class="mt-5">
+                            <label for="date">Start Date*</label>
+                            <input id="startDate" type="date" class="block w-full px-4 py-2 mt-2 text-gray-700 rounded-full focus:outline-none">
+                        </div>
+                        <div class="flex justify-around mt-20">
+                            <button id="submit" class="px-6 py-2 leading-5 w-32 text-white transition-colors duration-200 transform bg-[#8E63AD] rounded-full hover:bg-[#FDC858] focus:outline-none focus:bg-gray-600">SUBMIT</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
